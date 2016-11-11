@@ -1,0 +1,156 @@
+* {
+  box-sizing: border-box;
+  	-moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+body {
+  font-family: helvetica neue, sans-serif;
+}
+header {
+  margin: 0 5% 2% 5%;
+  overflow: auto;
+}
+.housingmatchicon {
+}
+.housingmatchicon img {
+  float: left;
+  width: 80px;
+  padding-right: 10px;
+}
+.fireplacetitle {
+  float: left;
+  width: 50%;
+}
+.fireplacetitle h1 {
+  margin: 0;
+}
+.tagline {
+  font-size: 0.8em;
+}
+.tagline h2 {
+
+}
+nav {
+  float: right;
+  width: 30%;
+}
+nav h3 {
+  text-align: right;
+  margin: 0;
+  color: orange;
+  font-weight: 200;
+
+}
+.container {
+  margin: 0 5%;
+}
+button {
+  width: 25%;
+  padding: 1%;
+  border: 2px solid orange;
+  background-color: white;
+  font-size: 1em;
+  font-weight: 500;
+  border-radius: 20px;
+  clear: both; /* do clears not work for buttons?? */
+}
+.bttnsm {
+  width: 70px;
+  font-size: 0.8em;
+}
+.bttnmed {
+  clear: both; /* maybe need clear fix?  */
+}
+.bttnbig {
+  /* doesn't need clearing (at top of page, call to actions) */
+}
+section {
+  clear: both;
+  overflow: auto;
+  padding: 3%;
+}
+.sectionbox {
+  background-color: silver;
+}
+
+input {
+  border: 1px solid darkgrey;
+
+}
+
+.overview h2 {
+  font-size: 3em;
+  margin-top: 0;
+}
+.overview .benefit {
+  width: 25%;
+  float: left;
+  overflow: auto;
+  text-align: center;
+}
+
+.benefit img {
+  width: 50px;
+  margin: 0 auto;
+}
+
+
+/* browse section styling ----------- */
+  /* FLEX-WRAP SO AVATARS GO TO NEXT ROW */
+  .light-weight-p {
+    font-weight: 200;
+  }
+  .right-side-info { /* define the type of avatar box that has buttons or text on the right side */
+    width: 200px;
+    border: 2px solid grey;
+    float: left;
+    padding: 1%;
+  }
+  .right-side-info .avatar {
+    margin: 0px;
+  }
+  .right-side-info img {
+    border-radius: 10px;
+
+  }
+
+/* discover section styling ----------- */
+.discover .avatar-row {
+  border: 2px solid grey;
+  overflow: auto;
+}
+.avatar {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto;
+}
+.avatar img {
+  width: 100%;
+}
+.button-below-avatar {
+  width: 90px;
+  float: left;
+  text-align: center;
+}
+.avatar-row .socialmediaicon {
+  /* ENABLE SCROLL HORIZONTAL */
+
+}
+
+
+
+
+footer {
+  margin: 0 5%;
+
+}
+
+
+
+
+
+@media screen and (min-width: 700px) {
+  .benefit img {
+    width: 90px; /* move to desktop, reduce for mobile */
+  }
+}
