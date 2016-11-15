@@ -15,11 +15,7 @@
 <!-- THIS STYLESHEET IS LOADED FOR ALL PAGES -->
 	<link rel="stylesheet" href="css/fireplace.css">
 <!-- FONT/ICON GLYPHS LOADED FOR ALL PAGES -->
-	<link rel="stylesheet" href="css/font.css">
-
-	<!-- THIS STYLESHEET MIGHT CHANGE BETWEEN PAGES.
-		<link rel="stylesheet" href="css/profiles.css">-->
-
+	<link rel="stylesheet" href="imgs/icomoon49648/style.css">
 
 
 	<title>Fireplace Housing Match Tool</title>
@@ -79,6 +75,7 @@
 
 	<section class="browse">
 		<h2>Browse People</h2>
+
 		<div class="avatar-row">
 			<div class="right-side-info">
 				<div class="avatar">
@@ -116,12 +113,24 @@
 				<p><span class="light-weight-p">living preferences: </span>shared, communal</p>
 				<p><span class="light-weight-p">dealbreaker: </span>not disclosed</p>
 			</div>
-		</div>
-		<button class="bttnmed">Browse by Filter</button>
+		</div>  <!-- end of "avatar-row" -->
+
+		<button class="bttnmed clearfix">Browse by Filter</button>
 	</section>
+
 
 	<section class="sectionbox">
 		<h2>Create Your Profile</h2>
+		<form>
+		  <input type="text" name="firstname" value="" placeholder="First name">
+		  <input type="text" name="lastname" value="" placeholder="Last name">
+			<input type="email" name="email" value="" placeholder="Email Address">
+			<input type="password" name="psw" value="" placeholder ="use some numbers and letters">
+			<br>
+			<label for="remember"><input type="checkbox" name="save creds" value="save" id="remember"/>Remember Me</label>
+		</form>
+
+
 		<a href="profile-create.html"><button class="bttnmed">Continue</button></a>
 	</section>
 
@@ -130,9 +139,12 @@
 		<p>Your friends may have a profile with us already. Login to FB, twitter or LinkedIn to find out!</p>
 		<input type="text" name="discover" placeholder="Search By Name">
 
-		<div class="socialmediaicon">
-
+		<div class="socialmediaicons">
+			<div class="socialicon icon-facebook-square"></div>
+			<div class="socialicon icon-twitter-square"></div>
+			<div class="socialicon icon-linkedin-square"></div>
 		</div>
+		<!-- ADD JAVASCRIPT TO MAKE THIS A TABBED MENU BETWEEN THE ICONS -->
 		<div class="avatar-row">
 			<div class="button-below-avatar">
 				<div class="avatar">
@@ -163,9 +175,11 @@
 
 	</section>
 
-	<section>
+	<section class="invite">
 		<h2>Invite Friends - Is your group compatible?</h2>
-		<input type="text" name="inviteemails" placeholder="Add email addresses separated by a comma">
+		<form action="invite"> <!-- WRONG ACTION?? -->
+			<input type="text" name="inviteemails" placeholder="Add email addresses separated by a comma">
+		</form>
 		<button class="bttnmed">Send an Invitation</button>
 		<button class="bttnmed">Share URL</button>
 	</section>

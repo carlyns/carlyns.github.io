@@ -39,20 +39,19 @@ nav h3 {
   margin: 0;
   color: orange;
   font-weight: 200;
-
 }
 .container {
   margin: 0 5%;
 }
 button {
-  width: 25%;
+  width: 200px;
   padding: 1%;
   border: 2px solid orange;
   background-color: white;
   font-size: 1em;
   font-weight: 500;
   border-radius: 20px;
-  clear: both; /* do clears not work for buttons?? */
+  /* clear: both; clear the element itself, not the element after it! */
 }
 .bttnsm {
   width: 70px;
@@ -75,11 +74,14 @@ section {
 
 input {
   border: 1px solid darkgrey;
+  height: 40px;
+  font-size: 1.3em;
+  padding-left: 2%; /* affects checkboxes! */
 
 }
 
 .overview h2 {
-  font-size: 3em;
+  font-size: 2em;
   margin-top: 0;
 }
 .overview .benefit {
@@ -87,8 +89,8 @@ input {
   float: left;
   overflow: auto;
   text-align: center;
+  font-size: 0.8em;
 }
-
 .benefit img {
   width: 50px;
   margin: 0 auto;
@@ -97,27 +99,40 @@ input {
 
 /* browse section styling ----------- */
   /* FLEX-WRAP SO AVATARS GO TO NEXT ROW */
-  .light-weight-p {
-    font-weight: 200;
-  }
-  .right-side-info { /* define the type of avatar box that has buttons or text on the right side */
-    width: 200px;
-    border: 2px solid grey;
-    float: left;
-    padding: 1%;
-  }
-  .right-side-info .avatar {
-    margin: 0px;
-  }
-  .right-side-info img {
-    border-radius: 10px;
 
-  }
+.light-weight-p {
+  font-weight: 200;
+}
+.browse .avatar-row { /* why is this including the button and the h2????? */
+  background-color: lightsteelblue;
+  overflow: auto;
+  clear: both;
+  /*  display: flex; THIS MAKES ALL THE CHILDREN BECOME %WIDTHS!  */
+  height: 300px;
+  flex-wrap: nowrap;
+}
+.right-side-info { /* define the type of avatar box that has buttons or text on the right side */
+  width: 200px;
+  border: 2px solid grey;
+  float: left;
+  padding: 1%;
+  margin-right: 5%;
+}
+.right-side-info .avatar {
+  margin: 0px;
+}
+.right-side-info img {
+  border-radius: 10px;
+}
 
 /* discover section styling ----------- */
 .discover .avatar-row {
   border: 2px solid grey;
+  height: 120px;
   overflow: auto;
+  clear: both;
+  display: flex;
+  wrap: flex-wrap;
 }
 .avatar {
   width: 70px;
@@ -131,17 +146,27 @@ input {
   width: 90px;
   float: left;
   text-align: center;
-}
-.avatar-row .socialmediaicon {
-  /* ENABLE SCROLL HORIZONTAL */
+  margin-right: 20px;
 
 }
+.avatar-row .socialmediaicons {
 
+}
+.socialicon {
+  font-size: 2em;
+  float: left;
+  padding-right: 3%;
+}
+
+.invite form {
+}
 
 
 
 footer {
   margin: 0 5%;
+  text-align: center;
+  font-size: 0.7em;
 
 }
 
@@ -150,7 +175,13 @@ footer {
 
 
 @media screen and (min-width: 700px) {
+  .overview h2 {
+    font-size: 3em;
+  }
   .benefit img {
     width: 90px; /* move to desktop, reduce for mobile */
+  }
+  .overview .benefit {
+    font-size: normal;
   }
 }
