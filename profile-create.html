@@ -14,15 +14,15 @@
 
 <!-- THIS STYLESHEET IS LOADED FOR ALL PAGES -->
 	<link rel="stylesheet" href="css/fireplace.css">
-<!-- FONT/ICON GLYPHS LOADED FOR ALL PAGES -->
-	<link rel="stylesheet" href="css/font.css">
+<!-- NAV GLYPHS -->
+	<link rel="stylesheet" href="imgs/icomoon25187/style.css">
 
 	<!-- THIS STYLESHEET MIGHT CHANGE BETWEEN PAGES.
 		<link rel="stylesheet" href="css/profiles.css">-->
 
 
 
-	<title>Fireplace | Your Profile</title>
+	<title>Your Profile | Group Match for Good Housing | Fireplace</title>
 
 </head>
 
@@ -48,105 +48,133 @@
 
 <div class="container">
 	<h1>Create Your Profile</h1>
-	<h3>View My Summary</h3>
+	<h3><a href="profile-summary.html">View My Summary</a></h3>
 
-	<section>
+	<section class="basicinfo sectionbox">
 		<h2>Section 1: Basic Info</h2>
-
+		<div class="navicon icon-chevron-down"></div>
 		<form>
-		  <input type="text" name="firstname" value="" placeholder="First name">
-		  <input type="text" name="lastname" value="" placeholder="Last name">
-			<input type="text" name="email" value="" placeholder="Email Address">
-			<input type="password" name="psw" value="" placeholder ="use some numbers and letters">
-			<br>
-			<label for="remember"><input type="checkbox" name="save creds" value="save" id="remember"/>Remember Me</label>
 
-			<p>What kind of housing community do you prefer?</p>
-			<select>
-				<option value="2">2-unit building</option>
-				<option value="3-8">3-8 units in building</option>
-				<option value="9-15">9-15 units in building</option>
-				<option value="15+">15+ units in building</option>
-				<option value="25+">25+ units in building</option>
-				<option value="100+">100+ units in building</option>
-				<option value="singlefam">single family homes scattered across more than one site</option>
-				<option value="singlefam">multi-family buildings scattered across more than one site</option>
-				<option value="singlefam">share a single free-standing house</option>
-				<option value="singlefam">dorm-style units with shared common spaces (like kitchen, bathrooms, living)</option>
+			  <div class="row-form">
+			  	<input class="col12" type="text" name="firstname" id="firstname" placeholder="First name">
+			  	<input class="col12" type="text" name="lastname" id="lastname" placeholder="Last name">
+			  </div>
+				<div class="row-form">
+					<input class="col12" type="text" name="email" id="email" placeholder="Email Address">
+					<input class="col12" type="password" name="password" id="password" placeholder ="Password">
+					<br>
+					<label class="col12" for="remember"><input type="checkbox" name="save creds" id="savescreds"/>Remember Me</label>
+				</div>
 
-			</select>
+				<div class="row-form">
+					<h3>What kind of housing community do you prefer?</h3>
+					<select class="dropdown-style" name="housing-type" id="housingtype" >
+						<option value="2">2-unit building</option>
+						<option value="3-8">3-8 units in building</option>
+						<option value="9-15">9-15 units in building</option>
+						<option value="15+">15+ units in building</option>
+						<option value="25+">25+ units in building</option>
+						<option value="100+">100+ units in building</option>
+						<option value="singlefam">single family homes scattered across more than one site</option>
+						<option value="singlefam">multi-family buildings scattered across more than one site</option>
+						<option value="singlefam">share a single free-standing house</option>
+						<option value="singlefam">dorm-style units with shared common spaces (like kitchen, bathrooms, living)</option>
+					</select>
+				</div>
 
 		</form>
-
-		<button class="bttnbig">Continue</button>
+		<button class="bttnbig" id="sec1button">Continue/Revise</button>
 
 	</section>
 
-	<section class="sectionbox">
+	<section class="interests">
 		<h2>Section 2: Interests</h2>
-		<h3>I tend to have enjoyable conversations about:</h3>
+		<div class="navicon icon-chevron-down"></div>
+
+		<form>
+			<h3>I tend to have enjoyable conversations about:</h3>
 			<p>In other words, what are your interests?</p>
 			<p>Select as many as you like.</p>
-		<form>
-			<input type="checkbox" name="interest" value="Bike">martial arts<br>
-		  <input type="checkbox" name="interest" value="Car" >dance<br>
-			<input type="checkbox" name="interest" value="Bike">yoga<br>
-		  <input type="checkbox" name="interest" value="Car" >sports<br>
-			<input type="checkbox" name="interest" value="Bike">philosophy<br>
-		  <input type="checkbox" name="interest" value="Car" >ty/movies<br>
-			<input type="checkbox" name="interest" value="Bike">music<br>
-		  <input type="checkbox" name="interest" value="Car" >design/the arts<br>
-			<input type="checkbox" name="interest" value="Bike">urban planning<br>
-		  <input type="checkbox" name="interest" value="Car" >social justice<br>
-			<input type="checkbox" name="interest" value="Bike">local politics<br>
-		  <input type="checkbox" name="interest" value="Car" >capitalism<br>
-			<input type="checkbox" name="interest" value="Car" >religion<br>
-			<input type="checkbox" name="interest" value="Bike">travel<br>
-			<input type="checkbox" name="interest" value="foreign languages" >foreign languages<br>
-			<input type="checkbox" name="interest" value="food">food<br>
-			<input type="checkbox" name="interest" value="cooking" >cooking<br>
-			<input type="checkbox" name="interest" value="Other">Other<br>
-				<input type="text" name="interest" placeholder="other">
+			<div class="row-form">
+				<div class="col6">
+					<label for="martial arts"><input type="checkbox" name="interest" id="martial arts" value="martial arts">martial arts</label><br>
+				  <label for="dance"><input type="checkbox" name="interest" id="dance" value="dance" >dance</label><br>
+					<label for="yoga"><input type="checkbox" name="interest" id="yoga" value="yoga">yoga</label><br>
+				  <label for="sports"><input type="checkbox" name="interest" id="sports" value="sports">sports</label><br>
+					<label for="philosophy"><input type="checkbox" name="interest" id="philosophy" value="philosophy">philosophy</label><br>
+				  <label for="tv/movies"><input type="checkbox" name="interest" id="tv/movies" value="tv/movies">tv/movies</label><br>
+					<label for="music"><input type="checkbox" name="interest" id="music" value="music">music</label><br>
+				  <label for="design/the arts"><input type="checkbox" name="interest" id="design/the arts" value="design/the arts">design/the arts</label><br>
+					<label for="urban planning"><input type="checkbox" name="interest" id="urban planning" value="urban planning">urban planning</label><br>
+				</div>
 
-		  <input type="submit" value="Submit">
+			  <div class="col6">
+					<!-- WRAP WITH LABELS FOR THE REST! -->
+			  	<input type="checkbox" name="interest" value="social justice" >social justice<br>
+					<input type="checkbox" name="interest" value="local politics">local politics<br>
+					<input type="checkbox" name="interest" value="capitalism" >capitalism<br>
+					<input type="checkbox" name="interest" value="religion" >religion<br>
+					<input type="checkbox" name="interest" value="travel">travel<br>
+					<input type="checkbox" name="interest" value="foreign languages" >foreign languages<br>
+					<input type="checkbox" name="interest" value="food">food<br>
+					<input type="checkbox" name="interest" value="cooking">cooking<br>
+					<input class="col6" type="text" name="interest" placeholder="other">
+			  </div>
+			</div>
+		</form>
+		<button class="bttnbig">Continue</button>
+
+	</section>
+
+	<section class="storage sectionbox">
+		<h2>Section 3: Storage Spaces</h2>
+		<div class="navicon icon-chevron-down"></div>
+
+		<form action="#">
+			<h3>What kind of storage spaces would you be willing to contribute to as a part of a monthly fee?</h3>
+			<p>Choose as many as you like.</p>
+				<input type="checkbox" name="storage" value="garage">garage<br>
+				<input type="checkbox" name="storage" value="toolshed">toolshed<br>
+				<input type="checkbox" name="storage" value="bike storage">bike storage<br>
+				<input type="checkbox" name="storage" value="personal storage">personal storage<br>
+				<input class="col12" type="text" name="storage" placeholder="other">
+		</form>
+		<button class="bttnbig">Continue</button>
+
+
+	</section>
+
+	<section class="location">
+		<h2>Section 4: Location</h2>
+		<div class="navicon icon-chevron-down"></div>
+
+		<form action="#">
+			<h3>If you prefer a particular Chicago neighborhood, pick one below!</h3>
+			<select class="dropdown-style">
+			  <option value="1">Albany Park</option>
+			  <option value="2">Saab</option>
+			  <option value="3">Mercedes</option>
+			  <option value="4">Audi</option>
+			</select>
+
+			<p>Alternatively, if there are certain qualities you look for in a neighborhood not necessarily tied to a specific neighborhood, describe them below. </p>
+			<input class="col12" type="text" name="neighborhood-qualities">
+
 
 		</form>
 		<button class="bttnbig">Continue</button>
 
 	</section>
 
-	<section>
-		<h2>Section 3: Storage Spaces</h2>
-			<h3>What kind of storage spaces would you be willing to contribute to as a part of a monthly fee?</h3>
-			<p>Choose as many as you like.</p>
-		<!-- need a form tag wrapping this? -->
-			<input type="checkbox" name="storage" value="garage">garage<br>
-			<input type="checkbox" name="storage" value="toolshed">toolshed<br>
-			<input type="checkbox" name="storage" value="bike storage">bike storage<br>
-			<input type="checkbox" name="storage" value="personal storage">personal storage<br>
-			<input type="checkbox" name="storage" value="Other">Other<br>
-				<input type="text" name="storage" placeholder="other">
-
-		<button class="bttnbig">Continue</button>
-
-	</section>
-
-	<section>
-		<h2>Section 4: Location</h2>
-		Neighborhood
-		<select>
-		  <option value="1">Albany Park</option>
-		  <option value="2">Saab</option>
-		  <option value="3">Mercedes</option>
-		  <option value="4">Audi</option>
-		</select>
-		<button class="bttnbig">Continue</button>
-
-	</section>
-
-	<section>
+	<section class="downpayment sectionbox">
 		<h2>Section 5: Down Payment</h2>
-		How much can you afford?
+		<div class="navicon icon-chevron-down"></div>
+
+		<form action="#">
+			<h3>How much can you afford?</h3>
+			<p>(At this moment in time)</p>
+			<input class="col12" type="text" name="downpayment" value="$" placeholder="00,000">
+		</form>
 		<button class="bttnbig">Continue</button>
 
 	</section>

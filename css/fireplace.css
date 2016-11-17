@@ -58,26 +58,67 @@ button {
   font-size: 0.8em;
 }
 .bttnmed {
-  clear: both; /* maybe need clear fix?  */
 }
-.bttnbig {
-  /* doesn't need clearing (at top of page, call to actions) */
+.bttnbig  {
 }
 section {
   clear: both;
   overflow: auto;
-  padding: 3%;
+  padding: 1% 3%;
 }
 .sectionbox {
   background-color: silver;
 }
+.navicon {
+  font-size: 2em;
+  float: right;
+  position: relative;
+  bottom: 60px;
+}
 
+
+/*------ FORM LAYOUT AND STYLING -----*/
+.row-form {
+  clear: both;
+}
+form {
+  clear: both;
+  margin-bottom: 3%;
+}
 input {
   border: 1px solid darkgrey;
-  height: 40px;
+  /* height affects checkboxes! */
   font-size: 1.3em;
   padding-left: 2%; /* affects checkboxes! */
-
+}
+.col6 {
+  width: 90%;
+}
+.dropdown-style {
+  width: 100%;
+  max-width: 700px;
+  height: 30px;
+}
+.form-basic-info input {
+  border: 1px solid blue;
+  margin-bottom: 1%;
+}
+.location .col12 {
+  height: 100px;
+  width: 90%;
+}
+@media screen and (min-width: 700px) {
+  .col6 {
+    margin-right: 2%;
+    float: left;
+    margin-bottom: 2%;
+  }
+  .col12 {
+    max-width: 700px;
+  }
+  .col6 {
+    width: 40%;
+  }
 }
 
 .overview h2 {
@@ -173,7 +214,7 @@ footer {
 
 
 
-
+/* convert this breakpoint to SASS variable!! */
 @media screen and (min-width: 700px) {
   .overview h2 {
     font-size: 3em;
