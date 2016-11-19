@@ -38,7 +38,7 @@
 		<h2 class="tagline">compatibility among friends for decent, affordable housing</h2>
 	</div>
 	<nav>
-		<h3>see my groups</h3>
+		<h3><a href="group-summary.html">view group summary</a></h3>
 		<h3>hi, natalie!</h3>
 	</nav>
 
@@ -48,13 +48,16 @@
 
 <div class="container">
 	<h1>Create Your Profile</h1>
-	<h3><a href="profile-summary.html">View My Summary</a></h3>
 
 	<section class="basicinfo sectionbox">
 		<h2>Section 1: Basic Info</h2>
 		<div class="navicon icon-chevron-down"></div>
-		<form>
 
+		<div class="summary">
+			<!-- populate with responses here -->
+		</div>
+
+		<form>
 			  <div class="row-form">
 			  	<input class="col12" type="text" name="firstname" id="firstname" placeholder="First name">
 			  	<input class="col12" type="text" name="lastname" id="lastname" placeholder="Last name">
@@ -69,27 +72,34 @@
 				<div class="row-form">
 					<h3>What kind of housing community do you prefer?</h3>
 					<select class="dropdown-style" name="housing-type" id="housingtype" >
-						<option value="2">2-unit building</option>
-						<option value="3-8">3-8 units in building</option>
-						<option value="9-15">9-15 units in building</option>
-						<option value="15+">15+ units in building</option>
-						<option value="25+">25+ units in building</option>
-						<option value="100+">100+ units in building</option>
-						<option value="singlefam">single family homes scattered across more than one site</option>
-						<option value="singlefam">multi-family buildings scattered across more than one site</option>
-						<option value="singlefam">share a single free-standing house</option>
-						<option value="singlefam">dorm-style units with shared common spaces (like kitchen, bathrooms, living)</option>
+						<!-- option tag will take what's btwn as 'value' -->
+						<option>2 unit building</option>
+						<option>3-8 unit building</option>
+						<option>9-15 unit building</option>
+						<option>15+ unit building</option>
+						<option>25+ unit building</option>
+						<option>100+ unit building</option>
+						<option>single family homes scattered across more than one site</option>
+						<option>multi-family buildings scattered across more than one site</option>
+						<option>share a single free-standing house</option>
+						<option>dorm-style units with shared common spaces (like kitchen, bathrooms, living)</option>
 					</select>
 				</div>
 
 		</form>
-		<button class="bttnbig" id="sec1button">Continue/Revise</button>
+		<button id="sec1button" class="bttnbig">Continue/Revise</button>
 
 	</section>
 
 	<section class="interests">
 		<h2>Section 2: Interests</h2>
 		<div class="navicon icon-chevron-down"></div>
+
+		<div class="summary-interests">
+			<!-- populate with checked values here -->
+			summary of your interests:
+		</div>
+
 
 		<form>
 			<h3>I tend to have enjoyable conversations about:</h3>
@@ -122,16 +132,16 @@
 			  </div>
 			</div>
 		</form>
-		<button class="bttnbig">Continue</button>
+		<button id="sec2button" <class="bttnbig">Continue</button>
 
 	</section>
 
 	<section class="storage sectionbox">
-		<h2>Section 3: Storage Spaces</h2>
+		<h2>Section 3: Extra Spaces & Amenities</h2>
 		<div class="navicon icon-chevron-down"></div>
 
 		<form action="#">
-			<h3>What kind of storage spaces would you be willing to contribute to as a part of a monthly fee?</h3>
+			<h3>What kind of extra spaces / amenities would you be willing to contribute to as a part of a monthly fee?</h3>
 			<p>Choose as many as you like.</p>
 				<input type="checkbox" name="storage" value="garage">garage<br>
 				<input type="checkbox" name="storage" value="toolshed">toolshed<br>
@@ -150,12 +160,95 @@
 
 		<form action="#">
 			<h3>If you prefer a particular Chicago neighborhood, pick one below!</h3>
-			<select class="dropdown-style">
-			  <option value="1">Albany Park</option>
-			  <option value="2">Saab</option>
-			  <option value="3">Mercedes</option>
-			  <option value="4">Audi</option>
-			</select>
+				<select class="dropdown-style">
+				  <option value="1">Albany Park</option>
+				  <option value="2">Archer Heights</option>
+				  <option value="Armour Square">Armour Square</option>
+				  <option value="Ashburn">Ashburn</option>
+
+								Auburn Gresham
+								Austin
+								Avalon Park
+								Avondale
+								Belmont Cragin
+								Beverly
+								Bridgeport
+								Brighton Park
+								Burnside
+								Calumet Heights
+								Chatham
+								Chicago Lawn
+								Clearing
+								Douglas
+								Dunning
+								East Garfield Park
+								East Side
+								Edgewater
+								Edison Park
+								Englewood
+								Forest Glen
+								Fuller Park
+								Gage Park
+								Garfield Ridge
+								Grand Boulevard
+								Greater Grand Crossing
+								Hegewisch
+								Hermosa
+								Humboldt Park
+								Hyde Park
+								Irving Park
+								Jefferson Park
+								Kenwood
+								Lake View
+								Lincoln Park
+								Lincoln Square
+								Logan Square
+								Loop
+								Lower West Side
+								McKinley Park
+								Montclare
+								Morgan Park
+								Mount Greenwood
+								Near North Side
+								Near South Side
+								Near West Side
+								New City
+								North Center
+								North Lawndale
+								North Park
+								Norwood Park
+								O’Hare
+								Oakland
+								Portage Park
+								Pullman
+								Riverdale
+								Rogers Park
+								Roseland
+								South Chicago
+								South Deering
+								South Lawndale
+								South Shore
+								Uptown
+								Washington Heights
+								Washington Park
+								West Elsdon
+								West Englewood
+								West Garfield Park
+								West Lawn
+								West Pullman
+								West Ridge
+								West Town
+								Woodlawn
+				</select>
+				<div class="row-form">
+					<div class="col6">
+						<label for="martial arts"><input type="checkbox" name="interest" id="martial arts">martial arts</label><br>
+					</div>
+					<div class="col6">
+						<label for="martial arts"><input type="checkbox" name="interest" id="martial arts">martial arts</label><br>
+					</div>
+				</div>
+
 
 			<p>Alternatively, if there are certain qualities you look for in a neighborhood not necessarily tied to a specific neighborhood, describe them below. </p>
 			<input class="col12" type="text" name="neighborhood-qualities">

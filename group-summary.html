@@ -22,7 +22,7 @@
 
 
 
-	<title>Your Summary Report | Group Match for Good Housing | Fireplace</title>
+	<title>Group Summary Report | Group Match for Good Housing | Fireplace</title>
 
 </head>
 
@@ -38,7 +38,7 @@
 		<h2 class="tagline">compatibility among friends for decent, affordable housing</h2>
 	</div>
 	<nav>
-		<h3>see my groups</h3>
+		<h3><a href="profile-create.html">see my profile</a></h3>
 		<h3>hi, natalie!</h3>
 	</nav>
 
@@ -47,54 +47,51 @@
 
 
 <div class="container summary">
-	<h1>My Summary Report</h1>
-	<h3><a href="profile-create.html">Edit My Profile</a></h3>
+	<h1>Group Summary Report</h1>
 
 	<section class="basicinfo sectionbox">
 		<h2>Section 1: Basic Info</h2>
 		<div class="navicon icon-chevron-down"></div>
-		<p><!-- user data goes here--></p>
-
-
-		<button class="bttnbig">Continue</button>
+		<h3>Names of Group Members: </h3>
+		<h3>Housing Type Preferences:</h3> <!-- A WAY TO DYNAMICALLY REPLACE THIS WITH THE KEY?? -->
 
 	</section>
 
 	<section class="interests">
 		<h2>Section 2: Interests</h2>
 		<div class="navicon icon-chevron-down"></div>
-			<p>List them all here</p>
-			<p>List them all here</p>
-			<p>List them all here</p>
-			<p>List them all here</p>
-			<p>List them all here</p>
-			<p>List them all here</p>
-			<p>List them all here</p>
-			<p>List them all here</p>
-			<p>List them all here</p>
-		<button class="bttnbig">Continue</button>
+		<p>Your group will likely enjoy discussing:</p>
+		<h3 id="display-music">Music</h3>
+		<!-- added here with .after() -->
+		<h3 id="display-travel">Travel</h3>
+		<!-- added here with .after() -->
+		<h3 id="display-sports">Sports</h3>
+		<!-- added here with .after() -->
+
+<!-- HOW CAN WE DISPLAY 'NO ONE' ?? -->
 
 	</section>
 
 	<section class="storage sectionbox">
-		<h2>Section 3: Storage Spaces</h2>
+		<h2>Section 3: Extra Spaces/Amenities</h2>
 		<div class="navicon icon-chevron-down"></div>
-			<h3>You would be willing to contribute a monthly fee o these spaces:</h3>
-			<p>List them all here</p>
-			<p>List them all here</p>
-			<p>List them all here</p>
-			<p>List them all here</p>
-			<p>List them all here</p>
-
-
-		<button class="bttnbig">Continue</button>
-
+			<p>This is how your group feels about the following spaces/amenities:</p>
+		<h3 id="display-garage">Garage</h3>
+		<h3 id="display-carsharing">Car Sharing</h3>
+		<h3 id="display-guestsuite">Guest Suite</h3>
+		<h3 id="display-coworking">Co-Working/Shared Office Equip</h3>
+		<h3 id="display-musicroom">Music Room</h3>
+		<h3 id="display-eventspace">Multi-Use Community/Event Space</h3>
+		<h3 id="display-bikeroom">Bike Room</h3>
+		<h3 id="display-personalstorage">Personal Storage</h3>
+		<h3 id="display-toolshed">Tool Shed/Project Space</h3>
+		<h3 id="display-otherspace">Other:</h3>
 	</section>
 
 	<section class="location">
 		<h2>Section 4: Location</h2>
 		<div class="navicon icon-chevron-down"></div>
-		<h3>You prefer these Chicago neighborhoods:</h3>
+		<h3>Your group prefers these Chicago neighborhoods:</h3>
 		<p>List them all here</p>
 		<p>List them all here</p>
 		<p>List them all here</p>
