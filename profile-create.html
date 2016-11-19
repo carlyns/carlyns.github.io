@@ -95,9 +95,8 @@
 		<h2>Section 2: Interests</h2>
 		<div class="navicon icon-chevron-down"></div>
 
-		<div class="summary-interests">
+		<div class="summary">
 			<!-- populate with checked values here -->
-			summary of your interests:
 		</div>
 
 
@@ -120,15 +119,15 @@
 
 			  <div class="col6">
 					<!-- WRAP WITH LABELS FOR THE REST! -->
-			  	<input type="checkbox" name="interest" value="social justice" >social justice<br>
-					<input type="checkbox" name="interest" value="local politics">local politics<br>
-					<input type="checkbox" name="interest" value="capitalism" >capitalism<br>
-					<input type="checkbox" name="interest" value="religion" >religion<br>
-					<input type="checkbox" name="interest" value="travel">travel<br>
-					<input type="checkbox" name="interest" value="foreign languages" >foreign languages<br>
-					<input type="checkbox" name="interest" value="food">food<br>
-					<input type="checkbox" name="interest" value="cooking">cooking<br>
-					<input class="col6" type="text" name="interest" placeholder="other">
+			  	<label for="social justice"><input type="checkbox" name="interest" id="social justice" value="social justice">social justice</label><br>
+					<label for="local politics"><input type="checkbox" name="interest" id="local politics" value="local politics">local politics</label><br>
+					<label for="capitalism"><input type="checkbox" name="interest" id="capitalism" value="capitalism" >capitalism</label><br>
+					<label for="religion"><input type="checkbox" name="interest" id="religion" value="religion" >religion</label><br>
+					<label for="travel"><input type="checkbox" name="interest" id="travel" value="travel">travel</label><br>
+					<label for="foreign languages"><input type="checkbox" name="interest" id="foreign languages" value="foreign languages">foreign languages</label><br>
+					<label for="food"><input type="checkbox" name="interest" id="food" value="food">food</label><br>
+					<label for="cooking"><input type="checkbox" name="interest" id="cooking" value="cooking">cooking</label><br>
+					<input class="col6" type="text" name="interest" id="other-interest" placeholder="other">
 			  </div>
 			</div>
 		</form>
@@ -136,20 +135,29 @@
 
 	</section>
 
-	<section class="storage sectionbox">
+	<section class="extra sectionbox">
 		<h2>Section 3: Extra Spaces & Amenities</h2>
 		<div class="navicon icon-chevron-down"></div>
+
+		<div class="summary">
+			<!-- populate with checked values here -->
+		</div>
 
 		<form action="#">
 			<h3>What kind of extra spaces / amenities would you be willing to contribute to as a part of a monthly fee?</h3>
 			<p>Choose as many as you like.</p>
-				<input type="checkbox" name="storage" value="garage">garage<br>
-				<input type="checkbox" name="storage" value="toolshed">toolshed<br>
-				<input type="checkbox" name="storage" value="bike storage">bike storage<br>
-				<input type="checkbox" name="storage" value="personal storage">personal storage<br>
-				<input class="col12" type="text" name="storage" placeholder="other">
+				<label for="garage"><input type="checkbox" id="garage" value="garage" name="extra">garage</label><br>
+				<label for="carsharing"><input type="checkbox" id="carsharing" value="car-sharing" name="extra">car-sharing</label><br>
+				<label for="guestsuite"><input type="checkbox" id="guestsuite" value="guest suite" name="extra">guest suite</label><br>
+				<label for="coworking"><input type="checkbox" id="coworking" value="co-working / shared office equipment" name="extra">co-working / shared office equipment</label><br>
+				<label for="musicroom"><input type="checkbox" id="musicroom" value="music room" name="extra">music room</label><br>
+				<label for="eventspace"><input type="checkbox" id="eventspace" value="multi-use community/event space" name="extra">multi-use community/event space</label><br>
+				<label for="bikeroom"><input type="checkbox" id="bikeroom" value="bike room" name="extra">bike room</label><br>
+				<label for="personalstorage"><input type="checkbox" id="personalstorage" value="personal storage" name="extra">personal storage</label><br>
+				<label for="toolshed"><input type="checkbox" id="toolshed" value="tool shed / project space" name="extra">tool shed / project space</label><br>
+				<input class="col12" type="text" name="extra" id="other-extra" placeholder="other">
 		</form>
-		<button class="bttnbig">Continue</button>
+		<button id="sec3button" class="bttnbig">Continue</button>
 
 
 	</section>
@@ -157,6 +165,10 @@
 	<section class="location">
 		<h2>Section 4: Location</h2>
 		<div class="navicon icon-chevron-down"></div>
+		<div class="summary">
+			<!-- populate with responses here -->
+			your preferred neighborhoods:
+		</div>
 
 		<form action="#">
 			<h3>If you prefer a particular Chicago neighborhood, pick one below!</h3>
@@ -255,20 +267,24 @@
 
 
 		</form>
-		<button class="bttnbig">Continue</button>
+		<button id="sec4button" class="bttnbig">Continue</button>
 
 	</section>
 
 	<section class="downpayment sectionbox">
 		<h2>Section 5: Down Payment</h2>
 		<div class="navicon icon-chevron-down"></div>
+		<div class="summary">
+			<!-- populate with responses here -->
+			you can afford a down payment of:
+		</div>
 
 		<form action="#">
 			<h3>How much can you afford?</h3>
 			<p>(At this moment in time)</p>
-			<input class="col12" type="text" name="downpayment" value="$" placeholder="00,000">
+			<input class="col12" type="text" id="afforddown" name="downpayment" value="$">
 		</form>
-		<button class="bttnbig">Continue</button>
+		<button id="sec5button" class="bttnbig">Continue</button>
 
 	</section>
 

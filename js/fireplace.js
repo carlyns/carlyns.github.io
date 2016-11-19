@@ -5,8 +5,8 @@
 // GOTTA BE AN EASIER WAY THAN TO WRITE THIS FOR EACH ONE??
 $('.basicinfo .icon-chevron-down').on("click",function(){
   $( ".basicinfo form" ).toggle(); // class>element needs to be in correct order!
-  $(this).toggleClass('.icon-chevron-up' );
-  // NOT REMOVING THE DOWN ARROW!
+  $('.basicinfo .display').toggle();
+  $('.icon-chevron-down').toggleClass('.icon-chevron-up'); // NOT REMOVING THE DOWN ARROW!
 
   // also add toggling to summary data
   // (need to put it in a div?)
@@ -14,18 +14,23 @@ $('.basicinfo .icon-chevron-down').on("click",function(){
 });
 $('.interests .icon-chevron-down').on("click",function(){
   $( ".interests form" ).toggle();
+  $('.interests .display').toggle();
+
   // ADD ARROW TOGGLE WHEN I FIGURE IT OUT
 });
-$('.storage .icon-chevron-down').on("click",function(){
-  $( ".storage form" ).toggle();
+$('.extra .icon-chevron-down').on("click",function(){
+  $( ".extra form" ).toggle();
+  $('.extra .display').toggle();
   // ADD ARROW TOGGLE WHEN I FIGURE IT OUT
 });
 $('.location .icon-chevron-down').on("click",function(){
   $( ".location form" ).toggle();
+  $('.location .display').toggle();
   // ADD ARROW TOGGLE WHEN I FIGURE IT OUT
 });
 $('.downpayment .icon-chevron-down').on("click",function(){
   $( ".downpayment form" ).toggle();
+  $('.downpayment .display').toggle();
   // ADD ARROW TOGGLE WHEN I FIGURE IT OUT
 });
 
@@ -45,6 +50,10 @@ var savescreds;
 // this is only reset 'Logout' button is clicked or on Summary Page when another person's profile can be viewed
 // "Save Profile" Button at bottom of Create Profile page
 // Populate top of Summary Page with Person 1, 2, 3, ... as Profiles are started.
+
+function continueEditTogg() {
+
+}
 
 function nextsection() {
   // close the current Section
@@ -79,48 +88,99 @@ $('#sec1button').on("click",function(){
   console.log ( savescreds ); // now it worked.
   console.log ( housingtype ); // now it worked.
 
+
+  // display user info upon submit
+  function displayBasicInfo() {
+    $('.basicinfo .summary').html(
+      '<p>' + firstN + '</p>'
+      + '<p>' + lastinitial + '</p>'
+      + '<p>' + email + '</p>'
+      + '<p>' + housingtype + '</p>'
+    );
+  }
   displayBasicInfo();
+
+  // hide input form
+  $('.basicinfo form').hide();
+  // can't hide button bc there's no way to toggle it back on edit
+
+  $('#sec1button').html('Edit');
+
   nextsection();
 
 });
 
-var checkedInterests = [];
 
-// on click of Section 1's continue button
+
+var checkedInterests = [];
+var otherInterest;
+// on click of Section 2's continue button
 $('#sec2button').on("click",function(){
 
   // which interests were checked
   $('[name="interest"]:checked').each(function(i,e){
     checkedInterests.push(e.value);
   });
+  otherInterest = $('#other-interest').val();
+
   console.log(checkedInterests); // yaay this worked.
-  $('.summary-interests').html(checkedInterests + ", ");
+  $('.interests .summary').append(checkedInterests + ", " + otherInterest);
 
 
+  //uncheck checkboxes, field & empty array
+  $('.interests form').find('input[type=checkbox]:checked').removeAttr('checked');
+  $('#other-interest').val('');
 
+  checkedInterests = [];
 
-  var sports = $('#sports').val();
-  console.log ( sports + 'was clicked' ); // now it worked.
+  // hide input form & button
+  $('.interests form').hide();
+  // can't hide button bc there's no way to toggle it back on edit
 
 });
 
 
+var checkedExtras = [];
+var otherExtra;
+// on click of Section 3's continue button
+$('#sec3button').on("click",function(){
+  // which extras were checked
+  $('[name="extra"]:checked').each(function(i,e){
+    checkedExtras.push(e.value);
+  });
+  otherExtra = $('#other-extra').val();
 
-// if someone is logged in, save those variables under that person's unique "variable" in an array.
+  console.log(checkedExtras);
+  $('.extra .summary').append(checkedExtras + ", " + otherExtra); // space after comma is not showing
 
-// display info only when you're on the summary page.  toggle between 'users'
+  //uncheck checkboxes, field & empty array
+  $('.extra form').find('input[type=checkbox]:checked').removeAttr('checked');
+  $('#other-extra').val('');
 
-// display user info upon submit
-function displayBasicInfo() {
-  $('.basicinfo .summary').html(
-    '<p>' + firstN + '</p>'
-    + '<p>' + lastinitial + '</p>'
-    + '<p>' + email + '</p>'
-    + '<p>' + housingtype + '</p>'
-  );
-  // also hide entire form
-  $('.basicinfo form').hide();
-}
+  checkedExtras = [];
+
+  // hide input form & button
+  $('.extra form').hide();
+  // can't hide button bc there's no way to toggle it back on edit
+
+});
+
+var afforddown;
+// on click of Section 5's continue button
+$('#sec5button').on("click",function(){
+  afforddown = $('#afforddown').val();
+
+  console.log(afforddown);
+  $('.downpayment .summary').append(afforddown);
+
+  // empty input form & empty variable
+  afforddown = ''; // NOT EMPTYING VARIABLE
+  $('#afforddown').val('$'); // yes, removing value in field
+
+
+
+
+});
 
 
 
@@ -250,7 +310,7 @@ people.forEach(function(element, index){ // WHAT IS ELEMENT AND INDEX REPRESENTI
   }
 
   // show group members (remember element is a local parameter!)
-  $('.summary .basicinfo h3:first').after(
+  $('.basicinfo .display h3:first').after(
     element.firstN + " " + element.lastN + ", "
   ); // HOW DO YOU CHANGE ORDER?
   // CURRENTLY UNWRAPPED
@@ -260,23 +320,23 @@ people.forEach(function(element, index){ // WHAT IS ELEMENT AND INDEX REPRESENTI
   //console.log( keys );
 
   // show housing type preferences
-  $('.summary .basicinfo h3').next().after(
+  $('.basicinfo .display h3').next().after(
     element.firstN + " wants to live in a " + element.housingtype + ", "
   );
   // WHY DOES CHANGING THE COMMA TO <br> LOOP THROUGH WEIRDLY??
 
   // show interests (make this one function??)
-  if(element.music){ //.summary .interests h3:first
+  if(element.music){ //.interests h3:first
     $('#display-music').after(
     "| " + element.firstN
     );
   }
-  if(element.travel){ // .summary .interests h3 +.next() ... BETTER WAY THAN USING next/last/first? ... otherwise #ids
+  if(element.travel){ // .interests h3 +.next() ... BETTER WAY THAN USING next/last/first? ... otherwise #ids
     $('#display-travel').after(
       "| " + element.firstN
     );
   }
-  if(element.sports){ //.summary .interests h3:last
+  if(element.sports){ //.interests h3:last
     $('#display-sports').after(
       "| " + element.firstN
     );
@@ -334,7 +394,10 @@ people.forEach(function(element, index){ // WHAT IS ELEMENT AND INDEX REPRESENTI
     );
   }
 
-  // display the 'selected' neighborhoods
+  // display each down payment contribution
+  $('.downpayment .display').after(
+    element.afforddown + " + "
+  );
 
 
 

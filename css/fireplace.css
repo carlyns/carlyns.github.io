@@ -43,6 +43,9 @@ nav h3 {
 .container {
   margin: 0 5%;
 }
+.summary {
+  margin-bottom: 3%;
+}
 button {
   width: 200px;
   padding: 1%;
@@ -51,6 +54,7 @@ button {
   font-size: 1em;
   font-weight: 500;
   border-radius: 20px;
+  clear: both;
   /* clear: both; clear the element itself, not the element after it! */
 }
 .bttnsm {
