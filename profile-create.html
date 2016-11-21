@@ -29,7 +29,7 @@
 
 
 <body>
-<header>
+<header id="top">
 	<div class="housingmatchicon">
 		<img src="imgs/noun_catherine-chestnut.png" alt="housing match icon">
 	</div>
@@ -41,9 +41,8 @@
 		<h3><a href="group-summary.html">view group</a></h3>
 		<h3>hi, user!</h3>
 	</nav>
-
 </header>
-
+<a href="#top"><div class="icon-chevron-with-circle-up"></div></a>
 
 
 <div class="container">
@@ -87,10 +86,11 @@
 				</div>
 
 		</form>
-		<button id="sec1button" class="bttnbig">Continue/Revise</button>
+		<a href="#sec2top"><button id="sec1button" class="bttnbig bttn-color-trans">Continue</button></a>
 
 	</section>
 
+	<div class="offsetforanchor" id="sec2top"></div>
 	<section class="interests">
 		<h2>Section 2: Interests</h2>
 		<div class="navicon icon-chevron-down"></div>
@@ -131,10 +131,11 @@
 			  </div>
 			</div>
 		</form>
-		<button id="sec2button" <class="bttnbig">Continue</button>
+		<a href="#sec3top"><button id="sec2button" <class="bttnbig">Continue</button></a>
 
 	</section>
 
+	<div class="offsetforanchor" id="sec3top"></div>
 	<section class="extra sectionbox">
 		<h2>Section 3: Extra Spaces & Amenities</h2>
 		<div class="navicon icon-chevron-down"></div>
@@ -157,17 +158,21 @@
 				<label for="toolshed"><input type="checkbox" id="toolshed" value="tool shed / project space" name="extra">tool shed / project space</label><br>
 				<input class="col12" type="text" name="extra" id="other-extra" placeholder="other">
 		</form>
-		<button id="sec3button" class="bttnbig">Continue</button>
+		<a href="#sec4top"><button id="sec3button" class="bttnbig">Continue</button></a>
 
 
 	</section>
 
+	<div class="offsetforanchor" id="sec4top"></div>
 	<section class="location">
 		<h2>Section 4: Location</h2>
 		<div class="navicon icon-chevron-down"></div>
 		<div class="summary">
 			<!-- populate with responses here -->
-			your preferred neighborhoods:
+			<p>Your preferred neighborhoods: </p>
+
+			<p>Neighborhood qualities you're looking for: </p>
+
 		</div>
 
 		<form action="#">
@@ -183,15 +188,16 @@
 
 			<div class="row-form">
 				<p>Alternatively, if there are certain qualities you look for in a neighborhood not necessarily tied to a specific neighborhood, describe them below. </p>
-				<input class="col12" type="text" name="neighborhood-qualities">
+				<input class="col12" type="text" id="neighborhood-qualities">
 			</div>
 
 
 		</form>
-		<button id="sec4button" class="bttnbig">Continue</button>
+		<a href="#sec5top"><button id="sec4button" class="bttnbig">Continue</button></a>
 
 	</section>
 
+	<div class="offsetforanchor" id="sec5top"></div>
 	<section class="downpayment sectionbox">
 		<h2>Section 5: Down Payment</h2>
 		<div class="navicon icon-chevron-down"></div>

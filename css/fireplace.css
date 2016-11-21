@@ -65,11 +65,15 @@ button {
   padding: 1%;
   border: 2px solid #FBB13C; /* yellow orange */
   background-color: white;
+  transition: background-color 0.25s ease-in;
   font-size: 1em;
   font-weight: 500;
   border-radius: 20px;
   clear: both;
   /* clear: both; clear the element itself, not the element after it! */
+}
+button:hover {
+  background-color: #FBB13C; /* yellow orange */
 }
 .bttnsm {
   width: 70px;
@@ -93,7 +97,18 @@ section {
   position: relative;
   bottom: 60px;
 }
-
+.icon-chevron-with-circle-up {
+  color: #39393A; /* onyx */
+  font-size: 2em;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  z-index: 3;
+}
+.offsetforanchor {
+  position: relative;
+  bottom: 500px;
+}
 
 /*------ FORM LAYOUT AND STYLING -----*/
 .row-form {
@@ -198,6 +213,7 @@ input {
 }
 .right-side-info { /* define the type of avatar box that has buttons or text on the right side */
   width: 200px;
+  height: 300px;
   border: 2px solid grey;
   float: left;
   padding: 5px;
@@ -249,8 +265,7 @@ input {
 }
 
 .display {
-  color: #297373;
-
+  color: #297373; /* myrtle green */
 }
 
 

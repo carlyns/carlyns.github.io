@@ -1,25 +1,45 @@
 // collapse all sections on page load
 
 // create checkboxes for 77 CAs
-
 // convert string to array
-var singleString = "Albany Park, Archer Heights, Armour Square, Ashburn, Auburn Gresham, Austin, Avalon Park, Avondale, Belmont Cragin, Beverly, Bridgeport";
+var firstString =
+  "Albany Park, Archer Heights, Armour Square, Ashburn, Auburn Gresham, Austin, Avalon Park, Avondale, Belmont Cragin, Beverly, Bridgeport, Brighton Park,Burnside,Calumet Heights, Chatham, Chicago Lawn, Clearing, Douglas, Dunning, East Garfield Park, East Side, Edgewater, Edison Park, Englewood, Forest Glen, Fuller Park, Gage Park, Garfield Ridge, Grand Boulevard, Greater Grand Crossing, Hegewisch, Hermosa, Humboldt Park, Hyde Park, Irving Park, Jefferson Park, Kenwood, Lake View, Lincoln Park, Lincoln Square";
+var secondString =
+  "Logan Square, Loop, Lower West Side, McKinley Park, Montclare, Morgan Park, Mount Greenwood, Near North Side, Near South Side, Near West Side, New City, North Center, North Lawndale, North Park, Norwood Park, O’Hare, Oakland, Portage Park, Pullman, Riverdale, Rogers Park, Roseland, South Chicago, South Deering, South Lawndale, South Shore, Uptown, Washington Heights, Washington Park, West Elsdon, West Englewood, West Garfield Park, West Lawn, West Pullman, West Ridge, West Town, Woodlawn";
 
-var list = singleString.split(", ");
+var firstList = firstString.split(", ");
+var secondList = secondString.split(", ");
 
-list.forEach(function(option, index){
+firstList.forEach(function(option, index){
   var valueAttr = option.toLowerCase();
   var idAttr = valueAttr.replace(/\s/g, '');
+  $('.location .col6:first').append( "<label for='" + firstList[index] + "'><input type='checkbox' name='location' id='" + idAttr + "' value='" + firstList[index] + "'>" + firstList[index] + "</label><br>" );
+});
 
-  $('.location .col6:first').append( "<label for=''><input type='checkbox' name='location' id='" + idAttr + "' value='" + valueAttr + "'>" + list[index] + "</label><br>" );
-
+secondList.forEach(function(option, index){
+  var valueAttr = option.toLowerCase();
+  var idAttr = valueAttr.replace(/\s/g, '');
+  $('.location .col6:last').append( "<label for='" + secondList[index] + "'><input type='checkbox' name='location' id='" + idAttr + "' value='" + secondList[index] + "'>" + secondList[index] + "</label><br>" );
 });
 
 // toggling profile sections
+// animate
 // GOTTA BE AN EASIER WAY THAN TO WRITE THIS FOR EACH ONE??
 $('.basicinfo .icon-chevron-down').on("click",function(){
-  $( ".basicinfo form" ).toggle(); // class>element needs to be in correct order!
-  $('.basicinfo .display').toggle();
+  $( ".basicinfo form" ).toggle(
+    function() {
+        $(this).animate({height: 'auto'});
+    }, function() {
+        $(this).animate({height: 'auto'});
+    }
+  ); // class>element needs to be in correct order!
+  $('.basicinfo .display').toggle(
+    function() {
+        $(this).animate({height: 'auto'});
+    }, function() {
+        $(this).animate({height: 'auto'});
+    }
+  );
   $('.icon-chevron-down').toggleClass('.icon-chevron-up'); // NOT REMOVING THE DOWN ARROW!
 
   // also add toggling to summary data
@@ -27,31 +47,77 @@ $('.basicinfo .icon-chevron-down').on("click",function(){
 
 });
 $('.interests .icon-chevron-down').on("click",function(){
-  $( ".interests form" ).toggle();
-  $('.interests .display').toggle();
+  $( ".interests form" ).toggle(
+    function() {
+        $(this).animate({height: 'auto'});
+    }, function() {
+        $(this).animate({height: 'auto'});
+    }
+  );
+  $('.interests .display').toggle(
+    function() {
+        $(this).animate({height: 'auto'});
+    }, function() {
+        $(this).animate({height: 'auto'});
+    }
+  );
 
   // ADD ARROW TOGGLE WHEN I FIGURE IT OUT
 });
 $('.extra .icon-chevron-down').on("click",function(){
-  $( ".extra form" ).toggle();
-  $('.extra .display').toggle();
+  $( ".extra form" ).toggle(
+    function() {
+        $(this).animate({height: 'auto'});
+    }, function() {
+        $(this).animate({height: 'auto'});
+    }
+  );
+  $('.extra .display').toggle(
+    function() {
+        $(this).animate({height: 'auto'});
+    }, function() {
+        $(this).animate({height: 'auto'});
+    }
+  );
   // ADD ARROW TOGGLE WHEN I FIGURE IT OUT
 });
 $('.location .icon-chevron-down').on("click",function(){
-  $( ".location form" ).toggle();
-  $('.location .display').toggle();
+  $( ".location form" ).toggle(
+    function() {
+        $(this).animate({height: 'auto'});
+    }, function() {
+        $(this).animate({height: 'auto'});
+    }
+  );
+  $('.location .display').toggle(
+    function() {
+        $(this).animate({height: 'auto'});
+    }, function() {
+        $(this).animate({height: 'auto'});
+    }
+  );
   // ADD ARROW TOGGLE WHEN I FIGURE IT OUT
 });
 $('.downpayment .icon-chevron-down').on("click",function(){
-  $( ".downpayment form" ).toggle();
-  $('.downpayment .display').toggle();
+  $( ".downpayment form" ).toggle(
+    function() {
+        $(this).animate({height: 'auto'});
+    }, function() {
+        $(this).animate({height: 'auto'});
+    }
+  );
+  $('.downpayment .display').toggle(
+    function() {
+        $(this).animate({height: 'auto'});
+    }, function() {
+        $(this).animate({height: 'auto'});
+    }
+  );
   // ADD ARROW TOGGLE WHEN I FIGURE IT OUT
 });
 
 
-
 // Login status shows PersonX
-
 // currently logged in person is: ? ... make sure this is global
 var firstN;
 var lastN;
@@ -59,26 +125,16 @@ var lastinitial;
 var email;
 var housingtype;
 var savescreds;
-
-
 // this is only reset 'Logout' button is clicked or on Summary Page when another person's profile can be viewed
 // "Save Profile" Button at bottom of Create Profile page
 // Populate top of Summary Page with Person 1, 2, 3, ... as Profiles are started.
 
-function continueEditTogg() {
-
-}
-
 function nextsection() {
-  // close the current Section
-
   // slide down to next Section
 
   // if last Section, then??
 }
 
-function revisesection() {
-}
 
 // on click of Section 1's continue button
 $('#sec1button').on("click",function(){
@@ -115,7 +171,11 @@ $('#sec1button').on("click",function(){
   displayBasicInfo();
 
   // hide input form
-  $('.basicinfo form').hide();
+  $('.basicinfo form').hide(function() {
+      $(this).animate({height: 'auto'});
+  }, function() {
+      $(this).animate({height: 'auto'});
+  });
   // can't hide button bc there's no way to toggle it back on edit
 
 
@@ -147,7 +207,11 @@ $('#sec2button').on("click",function(){
   checkedInterests = [];
 
   // hide input form & button
-  $('.interests form').hide();
+  $('.interests form').hide(function() {
+      $(this).animate({height: 'auto'});
+  }, function() {
+      $(this).animate({height: 'auto'});
+  });
   // can't hide button bc there's no way to toggle it back on edit
 
 });
@@ -173,10 +237,41 @@ $('#sec3button').on("click",function(){
   checkedExtras = [];
 
   // hide input form & button
-  $('.extra form').hide();
-  // can't hide button bc there's no way to toggle it back on edit
+  $('.extra form').hide(function() {
+      $(this).animate({height: 'auto'});
+  }, function() {
+      $(this).animate({height: 'auto'});
+  });
+  // CAN'T HIDE BUTTON bc there's no way to toggle it back on edit
 
 });
+
+var neighbPicks =[];
+var qualities;
+$('#sec4button').on("click",function(){
+  $('[name="location"]:checked').each(function(i,e){
+    neighbPicks.push(e.value);
+  });
+  qualities = $('#neighborhood-qualities').val();
+
+  $('.location .summary p:first').append(neighbPicks + ", ");
+  $('.location .summary p:last').append(qualities);
+
+  //uncheck checkboxes, field & empty array
+  $('.location form').find('input[type=checkbox]:checked').removeAttr('checked');
+  $('#neighborhood-qualities').val('');
+
+  neighbPicks = [];
+
+  // hide input form & button
+  $('.location form').hide(function() {
+      $(this).animate({height: 'auto'});
+  }, function() {
+      $(this).animate({height: 'auto'});
+  });
+
+});
+
 
 var afforddown;
 // on click of Section 5's continue button
@@ -190,7 +285,12 @@ $('#sec5button').on("click",function(){
   afforddown = ''; // NOT EMPTYING VARIABLE
   $('#afforddown').val('$'); // yes, removing value in field
 
-
+  // hide input form & button
+  $('.downpayment form').hide(function() {
+      $(this).animate({height: 'auto'});
+  }, function() {
+      $(this).animate({height: 'auto'});
+  });
 
 
 });
@@ -217,13 +317,6 @@ var neighbConvertCompare =
   [ "Albany Park", "Archer Heights", "Armour Square", "Ashburn", "Auburn Gresham", "Austin", "Avalon Park", "Avondale", "Belmont Cragin", "Beverly", "Bridgeport", "Brighton Park", "Burnside", "Calumet Heights", "Chatham", "Chicago Lawn", "Clearing", "Douglas", "Dunning", "East Garfield Park", "East Side", "Edgewater", "Edison Park", "Englewood", "Forest Glen", "Fuller Park", "Gage Park", "Garfield Ridge", "Grand Boulevard", "Greater Grand Crossing", "Hegewisch", "Hermosa", "Humboldt Park", "Hyde Park", "Irving Park", "Jefferson Park", "Kenwood", "Lake View", "Lincoln Park", "Lincoln Square", "Logan Square", "Loop", "Lower West Side", "McKinley Park", "Montclare", "Morgan Park", "Mount Greenwood", "Near North Side", "Near South Side", "Near West Side", "New City", "North Center", "North Lawndale", "North Park", "Norwood Park", "O’Hare", "Oakland", "Portage Park", "Pullman", "Riverdale", "Rogers Park", "Roseland", "South Chicago", "South Deering", "South Lawndale", "South Shore", "Uptown", "Washington Heights", "Washington Park", "West Elsdon", "West Englewood", "West Garfield Park", "West Lawn", "West Pullman", "West Ridge", "West Town", "Woodlawn"
   ];
 
-allNeighb[32]; // Humboldt
-allNeighb[42]; // Lower West Side
-
-var locationsT = [ false, true, false, true, false ]; // each person has 77 true/false values
-var locationsK = [ true, false, true, false, true];
-var locationsM = [ false, false, true, true, true];
-var locationsV = [ true, true, false, false, false ];
 
 // default all 77 false, except for a few indices that can be changed to true
 
@@ -269,24 +362,11 @@ function pickedArraysToBooleans(picks) { // PUT IT IN A FUNCTION WITH A PARAMATE
 
 }
 
-
-// make this work for any person
-
-
-
-
-
-
-
 // these are used later in foreach people object loop
 var prefNeighStrings = [];
 var prefNeighborhoods = [];
 
-
-
 // EVEN THOUGH I'M USING GLOBAL VARIABLES TO STORE FORM VALUES, I'M USING LOCAL VARIABLES BELOW AS OBJECT PROPERTIES (IS THIS CORRECT??) ... THEY SHOULD BE THE SAME IF BACKEND WAS CONFIGURED. FOR THESE PURPOSES, THERE DOESN'T SEEM TO BE A CONFLICT
-
-
 
 var people = [];
   // var people = [  this is the actual syntax of the objects
@@ -303,6 +383,7 @@ var valerie = [ "Rogers Park", "Edgewater", "Uptown"];
 people.push({ // .push just adds these to an array
   firstN: "Valerie",
   lastN: "Gaglio",
+  lastinitial: "G",
   email: "valentina@gmail.com",
   housingtype: "3-8 unit building",
   music: true,
@@ -327,6 +408,7 @@ people.push({ // .push just adds these to an array
 people.push({
   firstN: "Kenneth",
   lastN: "Atlas",
+  lastinitial: "A",
   email: "wherekenat@gmail.com",
   housingtype: "2 unit building",
   music: true,
@@ -350,6 +432,7 @@ people.push({
 people.push({
   firstN: "Mike",
   lastN: "McKinley",
+  lastinitial: "M",
   email: "mm38@gmail.com",
   housingtype: "15+ unit building",
   music: true,
@@ -375,6 +458,7 @@ people.push({
   // DOES THE ORDER NEED TO BE CONSISTENT BETWEEN people OBJECTS?
   firstN: "Teresa",
   lastN: "Anjo",
+  lastinitial: "J",
   email: "tangel@gmail.com",
   housingtype: "3-8 unit building",
   music: true,
@@ -406,13 +490,10 @@ people.forEach(function(element, index){ // WHAT IS ELEMENT AND INDEX REPRESENTI
   console.log(element.firstN + "'s preferred neighborhoods: " + element.neighborhoodPicks );
   console.log("This should show the true/false array of 77 for: " + element.firstN + " ... " + element.location ); // BUT IT DOESN'T, SEE ABOVE WHERE locationBooleans IS DEFINED.
 
-  if(element.sports){
-    //console.log(element.firstN);  // getting a property of each element that fits the SPORTS condition
-  }
 
   // show group members (remember element is a local parameter!)
   $('.basicinfo .display h3:first').after(
-    element.firstN + " " + element.lastN + ", "
+    element.firstN + " " + element.lastinitial + ", "
   ); // HOW DO YOU CHANGE ORDER?
   // CURRENTLY UNWRAPPED
 

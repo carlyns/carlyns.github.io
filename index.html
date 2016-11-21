@@ -16,7 +16,7 @@
 	<link rel="stylesheet" href="css/fireplace.css">
 <!-- SOCIAL MEDIA FONT/ICON GLYPHS -->
 	<link rel="stylesheet" href="imgs/icomoon49648/style.css">
-
+	<link rel="stylesheet" href="imgs/icomoon25187/style.css">
 
 	<title>Group Match for Good Housing | Fireplace</title>
 
@@ -25,7 +25,7 @@
 
 
 <body>
-<header>
+<header id="top">
 	<div class="housingmatchicon">
 		<img src="imgs/noun_catherine-chestnut.png" alt="housing match icon">
 	</div>
@@ -37,8 +37,8 @@
 		<h3>sign up</h3>
 		<h3>log in</h3>
 	</nav>
-
 </header>
+<a href="#top"><div class="icon-chevron-with-circle-up"></div></a>
 
 	<section class="overview">
 		<h2>find people. </br>
@@ -81,37 +81,37 @@
 				<div class="avatar">
 					<img src="http://placekitten.com/85/85" alt="kitten">
 				</div>
-				<p>Opal M. <span class="light-weight-p">in Logan Square</span></p>
+				<p>Sonia S. <span class="light-weight-p">in Logan Square</span></p>
 				<p><span class="light-weight-p">primary co-op goal: </span>to keep neighborhood affordable</p>
-				<p><span class="light-weight-p">living preferences: </span>shared, communal</p>
+				<p><span class="light-weight-p">living preferences: </span>private apartment</p>
 				<p><span class="light-weight-p">dealbreaker: </span>not disclosed</p>
 			</div>
 			<div class="right-side-info">
 				<div class="avatar">
 					<img src="http://placekitten.com/100/100" alt="kitten">
 				</div>
-				<p>Opal M. <span class="light-weight-p">in Logan Square</span></p>
-				<p><span class="light-weight-p">primary co-op goal: </span>to keep neighborhood affordable</p>
+				<p>Ronny D. <span class="light-weight-p">in Edgewater</span></p>
+				<p><span class="light-weight-p">primary co-op goal: </span>to afford property</p>
 				<p><span class="light-weight-p">living preferences: </span>shared, communal</p>
-				<p><span class="light-weight-p">dealbreaker: </span>not disclosed</p>
+				<p><span class="light-weight-p">dealbreaker: </span>no pets</p>
 			</div>
 			<div class="right-side-info">
 				<div class="avatar">
 					<img src="http://placekitten.com/105/105" alt="kitten">
 				</div>
-				<p>Opal M. <span class="light-weight-p">in Logan Square</span></p>
-				<p><span class="light-weight-p">primary co-op goal: </span>to keep neighborhood affordable</p>
-				<p><span class="light-weight-p">living preferences: </span>shared, communal</p>
+				<p>Laura M. <span class="light-weight-p">in McKinley Park</span></p>
+				<p><span class="light-weight-p">primary co-op goal: </span>to make an investment</p>
+				<p><span class="light-weight-p">living preferences: </span>scattered site, single family</p>
 				<p><span class="light-weight-p">dealbreaker: </span>not disclosed</p>
 			</div>
 			<div class="right-side-info">
 				<div class="avatar">
-					<img src="http://placekitten.com/110/110" alt="kitten">
+					<img src="http://placekitten.com/210/210" alt="kitten">
 				</div>
-				<p>Opal M. <span class="light-weight-p">in Logan Square</span></p>
-				<p><span class="light-weight-p">primary co-op goal: </span>to keep neighborhood affordable</p>
-				<p><span class="light-weight-p">living preferences: </span>shared, communal</p>
-				<p><span class="light-weight-p">dealbreaker: </span>not disclosed</p>
+				<p>John K. <span class="light-weight-p">in Englewood</span></p>
+				<p><span class="light-weight-p">primary co-op goal: </span>to live with better neighbors</p>
+				<p><span class="light-weight-p">living preferences: </span>private apartment</p>
+				<p><span class="light-weight-p">dealbreaker: </span>no open-door policy</p>
 			</div>
 		</div>  <!-- end of "avatar-row" -->
 
@@ -122,13 +122,33 @@
 	<section class="sectionbox">
 		<h2>Create Your Profile</h2>
 		<form>
-		  <input type="text" name="firstname" value="" placeholder="First name">
-		  <input type="text" name="lastname" value="" placeholder="Last name">
-			<input type="email" name="email" value="" placeholder="Email Address">
-			<input type="password" name="psw" value="" placeholder ="password">
-			<br>
-			<label for="remember"><input type="checkbox" name="save creds" value="save" id="remember"/>Remember Me</label>
-		</form>
+			<div class="row-form">
+				<input class="col12" type="text" name="firstname" id="firstname" placeholder="First name">
+				<input class="col12" type="text" name="lastname" id="lastname" placeholder="Last name">
+			</div>
+			<div class="row-form">
+				<input class="col12" type="text" name="email" id="email" placeholder="Email Address">
+				<input class="col12" type="password" name="password" id="password" placeholder ="Password">
+				<br>
+				<label class="col12" for="remember"><input type="checkbox" name="save creds" id="savescreds"/>Remember Me</label>
+			</div>
+
+			<div class="row-form">
+				<h3>What kind of housing community do you prefer?</h3>
+				<select class="dropdown-style" name="housing-type" id="housingtype" >
+					<!-- option tag will take what's btwn as 'value' -->
+					<option>2 unit building</option>
+					<option>3-8 unit building</option>
+					<option>9-15 unit building</option>
+					<option>15+ unit building</option>
+					<option>25+ unit building</option>
+					<option>100+ unit building</option>
+					<option>single family homes scattered across more than one site</option>
+					<option>multi-family buildings scattered across more than one site</option>
+					<option>share a single free-standing house</option>
+					<option>dorm-style units with shared common spaces (like kitchen, bathrooms, living)</option>
+				</select>
+			</div>		</form>
 
 
 		<a href="profile-create.html"><button class="bttnmed">Continue</button></a>
@@ -172,29 +192,77 @@
 			</div>
 			<div class="button-below-avatar">
 				<div class="avatar">
-					<img src="http://placekitten.com/70/70" alt="kitten">
+					<img src="http://placekitten.com/200/200" alt="kitten">
 				</div>
 				<button class="bttnsm">Connect</button>
 			</div>
 			<div class="button-below-avatar">
 				<div class="avatar">
-					<img src="http://placekitten.com/80/80" alt="kitten">
+					<img src="http://placekitten.com/205/205" alt="kitten">
 				</div>
 				<button class="bttnsm">Connect</button>
 			</div>
 			<div class="button-below-avatar">
 				<div class="avatar">
-					<img src="http://placekitten.com/90/90" alt="kitten">
+					<img src="http://placekitten.com/210/210" alt="kitten">
 				</div>
 				<button class="bttnsm">Connect</button>
 			</div>
 			<div class="button-below-avatar">
 				<div class="avatar">
-					<img src="http://placekitten.com/95/95" alt="kitten">
+					<img src="http://placekitten.com/215/215" alt="kitten">
 				</div>
 				<button class="bttnsm">Connect</button>
 			</div>
-		</div>
+			<div class="button-below-avatar">
+				<div class="avatar">
+					<img src="http://placekitten.com/220/220" alt="kitten">
+				</div>
+				<button class="bttnsm">Connect</button>
+			</div>
+			<div class="button-below-avatar">
+				<div class="avatar">
+					<img src="http://placekitten.com/225/225" alt="kitten">
+				</div>
+				<button class="bttnsm">Connect</button>
+			</div>
+			<div class="button-below-avatar">
+				<div class="avatar">
+					<img src="http://placekitten.com/230/230" alt="kitten">
+				</div>
+				<button class="bttnsm">Connect</button>
+			</div>
+			<div class="button-below-avatar">
+				<div class="avatar">
+					<img src="http://placekitten.com/235/235" alt="kitten">
+				</div>
+				<button class="bttnsm">Connect</button>
+			</div>
+			<div class="button-below-avatar">
+				<div class="avatar">
+					<img src="http://placekitten.com/240/240" alt="kitten">
+				</div>
+				<button class="bttnsm">Connect</button>
+			</div>
+			<div class="button-below-avatar">
+				<div class="avatar">
+					<img src="http://placekitten.com/245/245" alt="kitten">
+				</div>
+				<button class="bttnsm">Connect</button>
+			</div>
+			<div class="button-below-avatar">
+				<div class="avatar">
+					<img src="http://placekitten.com/250/250" alt="kitten">
+				</div>
+				<button class="bttnsm">Connect</button>
+			</div>
+			<div class="button-below-avatar">
+				<div class="avatar">
+					<img src="http://placekitten.com/255/255" alt="kitten">
+				</div>
+				<button class="bttnsm">Connect</button>
+			</div>
+		</div> <!-- end of "avatar-row"-->
 
 
 	</section>
