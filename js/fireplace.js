@@ -3,7 +3,7 @@
 // create checkboxes for 77 CAs
 // convert string to array
 var firstString =
-  "Albany Park, Archer Heights, Armour Square, Ashburn, Auburn Gresham, Austin, Avalon Park, Avondale, Belmont Cragin, Beverly, Bridgeport, Brighton Park,Burnside,Calumet Heights, Chatham, Chicago Lawn, Clearing, Douglas, Dunning, East Garfield Park, East Side, Edgewater, Edison Park, Englewood, Forest Glen, Fuller Park, Gage Park, Garfield Ridge, Grand Boulevard, Greater Grand Crossing, Hegewisch, Hermosa, Humboldt Park, Hyde Park, Irving Park, Jefferson Park, Kenwood, Lake View, Lincoln Park, Lincoln Square";
+  "Albany Park, Archer Heights, Armour Square, Ashburn, Auburn Gresham, Austin, Avalon Park, Avondale, Belmont Cragin, Beverly, Bridgeport, Brighton Park, Burnside, Calumet Heights, Chatham, Chicago Lawn, Clearing, Douglas, Dunning, East Garfield Park, East Side, Edgewater, Edison Park, Englewood, Forest Glen, Fuller Park, Gage Park, Garfield Ridge, Grand Boulevard, Greater Grand Crossing, Hegewisch, Hermosa, Humboldt Park, Hyde Park, Irving Park, Jefferson Park, Kenwood, Lake View, Lincoln Park, Lincoln Square";
 var secondString =
   "Logan Square, Loop, Lower West Side, McKinley Park, Montclare, Morgan Park, Mount Greenwood, Near North Side, Near South Side, Near West Side, New City, North Center, North Lawndale, North Park, Norwood Park, O’Hare, Oakland, Portage Park, Pullman, Riverdale, Rogers Park, Roseland, South Chicago, South Deering, South Lawndale, South Shore, Uptown, Washington Heights, Washington Park, West Elsdon, West Englewood, West Garfield Park, West Lawn, West Pullman, West Ridge, West Town, Woodlawn";
 
@@ -151,13 +151,6 @@ $('#sec1button').on("click",function(){
   else {
     savescreds = false;
   }
-  console.log ( firstN ); // now it worked.
-  console.log ( lastN ); // now it worked.
-  console.log ( email ); // now it worked.
-  console.log ( password ); // now it worked.
-  console.log ( savescreds ); // now it worked.
-  console.log ( housingtype ); // now it worked.
-
 
   // display user info upon submit
   function displayBasicInfo() {
@@ -382,7 +375,6 @@ var valerie = [ "Rogers Park", "Edgewater", "Uptown"];
 
 people.push({ // .push just adds these to an array
   firstN: "Valerie",
-  lastN: "Gaglio",
   lastinitial: "G",
   email: "valentina@gmail.com",
   housingtype: "3-8 unit building",
@@ -407,7 +399,6 @@ people.push({ // .push just adds these to an array
 });
 people.push({
   firstN: "Kenneth",
-  lastN: "Atlas",
   lastinitial: "A",
   email: "wherekenat@gmail.com",
   housingtype: "2 unit building",
@@ -431,7 +422,6 @@ people.push({
 });
 people.push({
   firstN: "Mike",
-  lastN: "McKinley",
   lastinitial: "M",
   email: "mm38@gmail.com",
   housingtype: "15+ unit building",
@@ -457,7 +447,6 @@ people.push({
 people.push({
   // DOES THE ORDER NEED TO BE CONSISTENT BETWEEN people OBJECTS?
   firstN: "Teresa",
-  lastN: "Anjo",
   lastinitial: "J",
   email: "tangel@gmail.com",
   housingtype: "3-8 unit building",
